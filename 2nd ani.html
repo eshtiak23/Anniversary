@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2nd Anniversary - Eshtiak & Mishu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: url('/mnt/data/Snapchat-448833202.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #d63384;
+            margin: 0;
+            padding: 0;
+            display: none;
+        }
+        .container {
+            margin-top: 50px;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        .countdown {
+            font-size: 2em;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .heart {
+            color: red;
+            font-size: 2em;
+            animation: heartbeat 1s infinite;
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+    </style>
+    <script>
+        function checkPassword() {
+            var password = prompt("Enter The First Metting Date to Access the Page:");
+            if (password === "19") {
+                document.body.style.display = "block";
+            } else {
+                alert("Incorrect password. Access denied.");
+                document.body.innerHTML = "";
+            }
+        }
+    </script>
+</head>
+<body onload="checkPassword()">
+    <div class="container">
+        <h1>Happy 2nd Anniversary! ❤️</h1>
+        <h1>Mishu</h>
+        <p>Our love story began on February 21, 2023, and it keeps growing stronger! 💕</p>
+        <div class="countdown" id="countdown"></div>
+        <p class="heart">❤️❤️❤️</p>
+    </div>
+
+    <script>
+        function updateCountdown() {
+            const startDate = new Date('2023-02-21');
+            const today = new Date();
+            const timeDiff = today - startDate;
+            const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+            document.getElementById('countdown').innerText = `We Have Been In Love For ${days} Days!`;
+        }
+        updateCountdown();
+    </script>
+    <h1>I Love You Mishu 💕 </h1>
+</body>
+</html>
